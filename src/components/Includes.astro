@@ -1,0 +1,41 @@
+---
+const includesList = [
+  "Uso privado del espacio",
+  "Mesas y sillas infantiles",
+  "Arco decorativo con globos",
+  "Parante de globos individual por niño",
+  "Mesas auxiliares",
+  "Pizarra con el nombre del homenajeado",
+  "Parlante Bluetooth con música infantil",
+  "Personal de limpieza",
+  "Parante de 5 niveles"
+];
+---
+
+<section id="incluye" class="py-16 md:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    
+    <div class="flex flex-col gap-3 mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9dbaf] bg-[#eef6df] text-forest-800 font-bold text-sm w-fit font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-600"></span>
+        Qué incluye Bosque Mágico
+      </span>
+      <h2 class="text-[clamp(2rem,3.5vw,3.1rem)] text-forest-900 leading-tight">
+        Todo lo esencial para celebrar sin estrés
+      </h2>
+      <p class="text-ink-700 text-lg">Base de servicio incluida en cada reserva del espacio privado.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+      {includesList.map((item) => (
+        <article class="bg-white/90 border border-cream-200 rounded-[20px] p-5 shadow-soft flex items-start gap-3 hover:-translate-y-1 transition-transform duration-300">
+          <div class="w-[26px] h-[26px] shrink-0 rounded-full flex items-center justify-center bg-[#e9f5d1] text-forest-800 font-black border border-[#cbe0ac] font-fredoka text-sm">
+            ✓
+          </div>
+          <p class="text-ink-900 leading-snug pt-0.5">{item}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

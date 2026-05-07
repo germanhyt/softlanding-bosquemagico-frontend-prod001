@@ -1,0 +1,36 @@
+---
+const faqData = [
+  { q: "¿Cómo separo mi fecha?", a: "Con adelanto de S/ 500 y validación del turno disponible." },
+  { q: "¿Cuánto es el adelanto?", a: "El adelanto para reserva es de S/ 500." },
+  { q: "¿Puedo llevar proveedores externos?", a: "Solo se trabaja con proveedores autorizados por Bosque Mágico." },
+  { q: "¿Puedo reprogramar?", a: "Sí, con mínimo 14 días de anticipación según disponibilidad." },
+  { q: "¿Qué pasa si supero los 25 niños?", a: "Del niño 26 al 35 aplica adicional de S/ 25 por niño." },
+  { q: "¿Qué horarios manejan?", a: "Turno 1: 9:00 a.m. - 12:00 m., Turno 2: 2:00 p.m. - 5:00 p.m., Turno 3: 7:00 p.m. - 10:00 p.m." },
+  { q: "¿Puedo agregar show y catering?", a: "Sí, ambos se pueden sumar como complementos al paquete." }
+];
+---
+
+<section id="faq" class="py-16">
+  <div class="max-w-[1200px] mx-auto px-4">
+    
+    <div class="flex flex-col gap-3 mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9dbaf] bg-[#eef6df] text-forest-800 font-bold text-sm w-fit font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-600"></span>
+        FAQ
+      </span>
+      <h2 class="text-[clamp(2rem,3.5vw,3.1rem)] text-forest-900 leading-tight">
+        Preguntas frecuentes
+      </h2>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {faqData.map((faq) => (
+        <article class="bg-white border border-cream-200 rounded-[20px] p-5 shadow-soft">
+          <h3 class="text-forest-900 text-lg font-fredoka mb-2">{faq.q}</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">{faq.a}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

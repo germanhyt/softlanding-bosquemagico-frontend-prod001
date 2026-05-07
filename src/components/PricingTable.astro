@@ -1,0 +1,105 @@
+---
+const tableHeaders = [
+  "Paquete",
+  "Duración",
+  "Espacio privado",
+  "Cajita Bosque Mágico",
+  "Catering extra",
+  "Carrito de snack",
+  "Show",
+  "Servicio extra",
+  "Asistente de evento",
+  "Costo L/V",
+  "Costo S/D/F"
+];
+
+const packages = [
+  {
+    name: "Básico",
+    duration: "3 horas",
+    space: "Sí",
+    box: "No",
+    catering: "Opcional",
+    snack: "Opcional",
+    show: "Opcional",
+    extra: "Opcional",
+    assistant: "No",
+    costW: "S/ 380",
+    costWE: "S/ 580"
+  },
+  {
+    name: "Estándar",
+    duration: "3 horas",
+    space: "Sí",
+    box: "Sí",
+    catering: "Opcional",
+    snack: "Opcional",
+    show: "1 show",
+    extra: "1 servicio",
+    assistant: "Sí",
+    costW: "S/ 480",
+    costWE: "S/ 680"
+  },
+  {
+    name: "Premium",
+    duration: "3 horas",
+    space: "Sí",
+    box: "Sí",
+    catering: "Incluido",
+    snack: "Incluido",
+    show: "1 show principal",
+    extra: "2 servicios",
+    assistant: "Sí",
+    costW: "S/ 580",
+    costWE: "S/ 780"
+  }
+];
+---
+
+<section id="paquetes" class="py-16 md:py-20">
+  <div class="max-w-[1200px] mx-auto px-4">
+    
+    <div class="flex flex-col gap-3 mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9dbaf] bg-[#eef6df] text-forest-800 font-bold text-sm w-fit font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-600"></span>
+        Paquetes
+      </span>
+      <h2 class="text-[clamp(2rem,3.5vw,3.1rem)] text-forest-900 leading-tight">
+        Tabla comercial premium
+      </h2>
+      <p class="text-ink-700 text-lg">Compara las opciones para encontrar el balance perfecto para tu celebración.</p>
+    </div>
+
+    <div class="overflow-x-auto rounded-[20px] border border-cream-200 bg-white shadow-soft">
+      <table class="w-full min-w-[880px] border-collapse text-[0.95rem]">
+        <thead>
+          <tr>
+            {tableHeaders.map((header) => (
+              <th class="p-4 text-left font-fredoka text-[0.98rem] text-forest-900 bg-[#f4f8e9] whitespace-nowrap border-b border-[#f0e7d4]">
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {packages.map((pkg) => (
+            <tr class="hover:bg-[#fffdf8] transition-colors">
+              <td class="p-4 border-b border-[#f0e7d4] font-bold text-wood-700">{pkg.name}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.duration}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.space}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.box}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.catering}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.snack}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.show}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.extra}</td>
+              <td class="p-4 border-b border-[#f0e7d4] text-ink-900">{pkg.assistant}</td>
+              <td class="p-4 border-b border-[#f0e7d4] font-bold text-forest-900 bg-[#fefdf4]">{pkg.costW}</td>
+              <td class="p-4 border-b border-[#f0e7d4] font-bold text-forest-900 bg-[#fefdf4]">{pkg.costWE}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,49 @@
+---
+import logo from '../assets/img/logo-bm.png';
+---
+
+<footer class="pt-10 pb-16" id="contacto">
+  <div class="max-w-[1200px] mx-auto px-4">
+    <div class="bg-white/90 border border-cream-200 rounded-[20px] shadow-soft p-6 md:p-8 grid grid-cols-1 md:grid-cols-[1.15fr_0.85fr] gap-6">
+      
+      <div class="flex flex-col sm:flex-row gap-4 items-start">
+        <img 
+          src={logo.src} 
+          alt="Bosque Mágico" 
+          class="w-[74px] h-[74px] object-contain bg-[#fff4de] border border-[#dfc99f] rounded-xl p-1.5 shrink-0" 
+        />
+        <div class="flex flex-col gap-3">
+          <h3 class="text-forest-900 text-3xl font-fredoka leading-none">Bosque Mágico</h3>
+          <p class="text-ink-700 text-base max-w-md leading-relaxed">
+            Unidad de fiestas infantiles dentro de Refugio. Espacios privados, experiencias ordenadas y operación comercial con CRM.
+          </p>
+          <div class="flex flex-wrap gap-2.5 pt-2">
+            <a 
+              href="https://wa.me/51999999999" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="inline-flex items-center justify-center text-[#0f3f28] bg-[#d7f7df] border border-[#9ad2aa] px-5 py-2.5 rounded-full font-fredoka font-bold text-base hover:-translate-y-0.5 transition-transform"
+            >
+              WhatsApp
+            </a>
+            <a 
+              href="#crm" 
+              class="inline-flex items-center justify-center text-white bg-gradient-to-b from-forest-700 to-forest-900 shadow-strong px-5 py-2.5 rounded-full font-fredoka font-bold text-base hover:-translate-y-0.5 transition-transform"
+            >
+              Acceso CRM
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <ul class="flex flex-col gap-2.5 text-ink-900 text-base justify-center">
+        <li><strong class="text-wood-700 font-fredoka">Ubicación:</strong> Refugio, Santiago de Surco</li>
+        <li><strong class="text-wood-700 font-fredoka">Contacto:</strong> +51 999 999 999</li>
+        <li><strong class="text-wood-700 font-fredoka">Correo:</strong> ventas@bosquemagico.pe</li>
+        <li><strong class="text-wood-700 font-fredoka">Horario comercial:</strong> Lunes a domingo</li>
+        <li><strong class="text-wood-700 font-fredoka">Reservas:</strong> Adelanto de S/ 500</li>
+      </ul>
+
+    </div>
+  </div>
+</footer>

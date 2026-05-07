@@ -1,0 +1,47 @@
+---
+const showsData = [
+  { nombre: "Magia Chispeante", descripcion: "Magia participativa con dinámica familiar.", duracion: "45 min", capacidad: "Hasta 35 niños" },
+  { nombre: "Show Mimo", descripcion: "Show de interacción escénica y humor infantil.", duracion: "40 min", capacidad: "Hasta 30 niños" },
+  { nombre: "Mimo - Globoflexia", descripcion: "Rutina de mimo con figuras de globos.", duracion: "45 min", capacidad: "Hasta 35 niños" },
+  { nombre: "Laboratorio Mágico", descripcion: "Experiencia de ciencia divertida para niños.", duracion: "50 min", capacidad: "Hasta 30 niños" },
+  { nombre: "Burbujas Fantásticas", descripcion: "Burbujas gigantes y juego visual.", duracion: "35 min", capacidad: "Hasta 25 niños" },
+  { nombre: "Chispa Game", descripcion: "Retos y juegos guiados por animador.", duracion: "45 min", capacidad: "Hasta 35 niños" },
+  { nombre: "Silent Disco", descripcion: "Fiesta con audífonos y playlists infantiles.", duracion: "45 min", capacidad: "Hasta 25 niños" },
+  { nombre: "Cine al Aire Libre", descripcion: "Proyección temática infantil para cierre del evento.", duracion: "60 min", capacidad: "Hasta 35 niños" }
+];
+---
+
+<section id="shows" class="py-10">
+  <div class="max-w-[1200px] mx-auto px-4">
+    
+    <div class="flex flex-col gap-3 mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9dbaf] bg-[#eef6df] text-forest-800 font-bold text-sm w-fit font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-600"></span>
+        Shows
+      </span>
+      <h2 class="text-[clamp(2rem,3.5vw,3.1rem)] text-forest-900 leading-tight">
+        Shows temáticos para cada estilo de fiesta
+      </h2>
+      <p class="text-ink-700 text-lg">Listado comercial con duración y capacidad máxima.</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {showsData.map((show) => (
+        <article class="bg-white border border-cream-200 rounded-[20px] p-5 shadow-soft hover:-translate-y-1 transition-transform duration-300 flex flex-col h-full">
+          <h3 class="text-forest-900 text-xl font-fredoka mb-2">{show.nombre}</h3>
+          <p class="text-ink-700 text-sm leading-relaxed flex-grow">{show.descripcion}</p>
+          
+          <div class="mt-4 flex flex-col gap-2">
+            <span class="inline-block bg-[#f8f4e8] border border-[#ecddbd] rounded-[10px] px-2.5 py-1.5 text-[0.88rem] text-[#544c3a] font-semibold w-fit">
+              ⏱️ {show.duracion}
+            </span>
+            <span class="inline-block bg-[#f8f4e8] border border-[#ecddbd] rounded-[10px] px-2.5 py-1.5 text-[0.88rem] text-[#544c3a] font-semibold w-fit">
+              👦 {show.capacidad}
+            </span>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

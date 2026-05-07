@@ -1,0 +1,38 @@
+---
+const cateringData = [
+  { nombre: "Popcorn", detalle: "Presentación por unidad" },
+  { nombre: "Algodón de azúcar", detalle: "Presentación por unidad" },
+  { nombre: "Manzanas acarameladas", detalle: "Presentación por unidad" },
+  { nombre: "Mazamorra morada", detalle: "Presentación por unidad" },
+  { nombre: "Gelatina", detalle: "Presentación por unidad" },
+  { nombre: "Arroz con leche", detalle: "Presentación por unidad" }
+];
+---
+
+<section id="catering" class="py-10">
+  <div class="max-w-[1200px] mx-auto px-4">
+    
+    <div class="flex flex-col gap-3 mb-8">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c9dbaf] bg-[#eef6df] text-forest-800 font-bold text-sm w-fit font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-600"></span>
+        Catering
+      </span>
+      <h2 class="text-[clamp(2rem,3.5vw,3.1rem)] text-forest-900 leading-tight">
+        Opciones dulces para eventos infantiles
+      </h2>
+      <p class="text-ink-700 text-lg">
+        <strong class="font-bold text-wood-700">Condición:</strong> mínimo 18 unidades por evento.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {cateringData.map((item) => (
+        <article class="bg-white border border-cream-200 rounded-[20px] p-5 shadow-soft hover:-translate-y-1 transition-transform duration-300">
+          <h3 class="text-forest-900 text-xl font-fredoka mb-2">{item.nombre}</h3>
+          <p class="text-ink-700 text-sm leading-relaxed">{item.detalle}</p>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</section>

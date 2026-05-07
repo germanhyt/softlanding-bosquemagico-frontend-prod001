@@ -1,0 +1,83 @@
+---
+import logo from '../assets/img/logo-bm.png';
+---
+
+<section id="inicio" class="pt-8 pb-10">
+  <div class="max-w-[1200px] mx-auto px-4 grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-6">
+    
+    <!-- Main Hero Article -->
+    <article class="relative overflow-hidden rounded-[30px] border-2 border-gold-400/40 bg-gradient-to-br from-forest-900 to-forest-700 text-white p-7 lg:p-8 shadow-strong">
+      <!-- Glow effect -->
+      <div class="absolute -right-24 -bottom-24 w-64 h-64 rounded-full bg-white/25 blur-3xl"></div>
+      
+      <!-- Pill -->
+      <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full border border-white/20 bg-white/10 text-white font-bold text-sm font-fredoka">
+        <span class="w-2 h-2 rounded-full bg-olive-500"></span>
+        Experiencias infantiles premium
+      </span>
+      
+      <h1 class="text-[clamp(2.5rem,5vw,4.6rem)] leading-[1.05] font-fredoka mt-4 mb-3 text-white">
+        Tu fiesta infantil soñada en un bosque cálido, elegante y privado
+      </h1>
+      
+      <p class="max-w-[690px] text-white/90 text-lg leading-relaxed">
+        Bosque Mágico es la unidad de fiestas infantiles dentro de Refugio. Diseñamos celebraciones privadas para familias que buscan orden, atención y una experiencia visual memorable para el cumpleañero.
+      </p>
+      
+      <!-- CTAs -->
+      <div class="flex flex-wrap gap-2.5 mt-6">
+        <a 
+          href="#cotizacion" 
+          class="inline-flex items-center justify-center text-forest-900 bg-[#edf6de] border border-[#cfe3af] px-6 py-3 rounded-full font-fredoka font-bold text-base hover:-translate-y-0.5 transition-transform"
+        >
+          Solicitar cotización
+        </a>
+        <a 
+          href="#paquetes" 
+          class="inline-flex items-center justify-center text-white bg-transparent border border-white/30 px-6 py-3 rounded-full font-fredoka font-bold text-base hover:bg-white/10 hover:-translate-y-0.5 transition-all"
+        >
+          Ver paquetes
+        </a>
+      </div>
+      
+      <!-- Tags -->
+      <div class="flex flex-wrap gap-2 mt-6">
+        <span class="px-3 py-2 rounded-full text-sm font-bold bg-white/15 border border-white/20 text-white font-fredoka">
+          Uso privado del espacio
+        </span>
+        <span class="px-3 py-2 rounded-full text-sm font-bold bg-white/15 border border-white/20 text-white font-fredoka">
+          Turnos de 3 horas
+        </span>
+        <span class="px-3 py-2 rounded-full text-sm font-bold bg-white/15 border border-white/20 text-white font-fredoka">
+          Desde S/ 380
+        </span>
+      </div>
+    </article>
+
+    <!-- Side Content -->
+    <div class="flex flex-col gap-4">
+      
+      <!-- Media Box -->
+      <article class="bg-gradient-to-b from-[#fff8ea] to-[#f5ead2] rounded-[20px] min-h-[280px] p-6 flex items-center justify-center border border-wood-700/10 relative overflow-hidden">
+        <!-- Optional pattern can be added here -->
+        <img src={logo.src} alt="Identidad Bosque Mágico" class="max-h-[300px] object-contain relative z-10" />
+      </article>
+      
+      <!-- Stats Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+        <article class="bg-white/90 border border-cream-200 rounded-[20px] shadow-soft p-4.5">
+          <h4 class="text-wood-700 text-lg font-fredoka mb-1">Lunes a viernes</h4>
+          <strong class="block text-forest-900 text-[2rem] font-fredoka leading-none mb-1">S/ 380</strong>
+          <p class="text-ink-700 text-sm">Tarifa base por turno.</p>
+        </article>
+        
+        <article class="bg-white/90 border border-cream-200 rounded-[20px] shadow-soft p-4.5">
+          <h4 class="text-wood-700 text-lg font-fredoka mb-1">Sábados y domingos</h4>
+          <strong class="block text-forest-900 text-[2rem] font-fredoka leading-none mb-1">S/ 580</strong>
+          <p class="text-ink-700 text-sm">Tarifa base por turno.</p>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
